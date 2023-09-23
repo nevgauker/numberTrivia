@@ -7,15 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DC8E6F5B2ABC765600C1291A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5A2ABC765600C1291A /* AppDelegate.swift */; };
-		DC8E6F5D2ABC765600C1291A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5C2ABC765600C1291A /* SceneDelegate.swift */; };
-		DC8E6F5F2ABC765600C1291A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5E2ABC765600C1291A /* ViewController.swift */; };
+		DC33B7602ABEE0D1004EBBFF /* triviaDouble.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8E6FB52ABCBD7000C1291A /* triviaDouble.json */; };
+		DC33B7612ABEE0D5004EBBFF /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = DC8E6FB32ABCBD2800C1291A /* trivia.json */; };
+		DC33B7652ABEE66C004EBBFF /* MockNumberTriviaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FA32ABC94AB00C1291A /* MockNumberTriviaRepository.swift */; };
+		DC33B7662ABEE6D7004EBBFF /* NumberTriviaRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F982ABC7A1700C1291A /* NumberTriviaRepository.swift */; };
+		DC33B7672ABEE6E5004EBBFF /* NumberTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F962ABC79B900C1291A /* NumberTrivia.swift */; };
+		DC33B7682ABEE6F0004EBBFF /* GetConcreteNumberTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FA12ABC84DD00C1291A /* GetConcreteNumberTrivia.swift */; };
+		DC33B7692ABEE6F3004EBBFF /* GetRandomNumberTrivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FA72ABC988D00C1291A /* GetRandomNumberTrivia.swift */; };
+		DC33B76A2ABEE6F8004EBBFF /* NumberTriviaRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B7552ABDF9F0004EBBFF /* NumberTriviaRemoteDataSource.swift */; };
+		DC33B76B2ABEE6FB004EBBFF /* NumberTriviaLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B75A2ABDFF09004EBBFF /* NumberTriviaLocalDataSource.swift */; };
+		DC33B76C2ABEE70A004EBBFF /* Either.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F9D2ABC83B000C1291A /* Either.swift */; };
+		DC33B76D2ABEE716004EBBFF /* Usecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F9F2ABC83E500C1291A /* Usecase.swift */; };
+		DC33B76E2ABEE72E004EBBFF /* NumberTriviaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FA92ABCB4E300C1291A /* NumberTriviaModel.swift */; };
+		DC33B76F2ABEE744004EBBFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5E2ABC765600C1291A /* ViewController.swift */; };
+		DC33B7702ABEE747004EBBFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5C2ABC765600C1291A /* SceneDelegate.swift */; };
+		DC33B7722ABEE78A004EBBFF /* Exception.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B7582ABDFB3E004EBBFF /* Exception.swift */; };
+		DC33B7732ABEE78D004EBBFF /* DataFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B75C2ABED388004EBBFF /* DataFailure.swift */; };
+		DC33B7742ABEE795004EBBFF /* JsonToString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FB72ABCBDF100C1291A /* JsonToString.swift */; };
+		DC33B7752ABEE798004EBBFF /* JsonStringToMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FBB2ABCD1B600C1291A /* JsonStringToMap.swift */; };
+		DC33B7762ABEE7AE004EBBFF /* NumberTriviaRepositoryImpl .swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B7502ABD86AC004EBBFF /* NumberTriviaRepositoryImpl .swift */; };
+		DC33B7782ABEF22F004EBBFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F5A2ABC765600C1291A /* AppDelegate.swift */; };
+		DC33B77B2ABEF743004EBBFF /* MockLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B77A2ABEF743004EBBFF /* MockLocalDataSource.swift */; };
+		DC33B77D2ABEF7C1004EBBFF /* NumberTriviaRepositoryImplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B77C2ABEF7C1004EBBFF /* NumberTriviaRepositoryImplTests.swift */; };
+		DC33B77E2ABEF9C4004EBBFF /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC33B7532ABD875A004EBBFF /* NetworkInfo.swift */; };
 		DC8E6F622ABC765600C1291A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8E6F602ABC765600C1291A /* Main.storyboard */; };
 		DC8E6F642ABC765800C1291A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8E6F632ABC765800C1291A /* Assets.xcassets */; };
 		DC8E6F672ABC765800C1291A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC8E6F652ABC765800C1291A /* LaunchScreen.storyboard */; };
-		DC8E6F722ABC765900C1291A /* NumberTriviaSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F712ABC765900C1291A /* NumberTriviaSwiftTests.swift */; };
 		DC8E6F7C2ABC765900C1291A /* NumberTriviaSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F7B2ABC765900C1291A /* NumberTriviaSwiftUITests.swift */; };
 		DC8E6F7E2ABC765900C1291A /* NumberTriviaSwiftUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F7D2ABC765900C1291A /* NumberTriviaSwiftUITestsLaunchTests.swift */; };
+		DC8E6F9B2ABC7C6500C1291A /* GetConcreteNumberTriviaTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6F9A2ABC7C6500C1291A /* GetConcreteNumberTriviaTest.swift */; };
+		DC8E6FA62ABC969600C1291A /* GetRandomNumberTriviaTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FA52ABC969600C1291A /* GetRandomNumberTriviaTest.swift */; };
+		DC8E6FAC2ABCB50700C1291A /* NumberTriviaModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FAB2ABCB50700C1291A /* NumberTriviaModelTest.swift */; };
+		DC8E6FBA2ABCC63400C1291A /* JsonToStringTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FB92ABCC63400C1291A /* JsonToStringTest.swift */; };
+		DC8E6FBE2ABD561A00C1291A /* JsonStringToMapTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8E6FBD2ABD561A00C1291A /* JsonStringToMapTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +60,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DC33B7502ABD86AC004EBBFF /* NumberTriviaRepositoryImpl .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberTriviaRepositoryImpl .swift"; sourceTree = "<group>"; };
+		DC33B7532ABD875A004EBBFF /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		DC33B7552ABDF9F0004EBBFF /* NumberTriviaRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaRemoteDataSource.swift; sourceTree = "<group>"; };
+		DC33B7582ABDFB3E004EBBFF /* Exception.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exception.swift; sourceTree = "<group>"; };
+		DC33B75A2ABDFF09004EBBFF /* NumberTriviaLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaLocalDataSource.swift; sourceTree = "<group>"; };
+		DC33B75C2ABED388004EBBFF /* DataFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFailure.swift; sourceTree = "<group>"; };
+		DC33B77A2ABEF743004EBBFF /* MockLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLocalDataSource.swift; sourceTree = "<group>"; };
+		DC33B77C2ABEF7C1004EBBFF /* NumberTriviaRepositoryImplTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaRepositoryImplTests.swift; sourceTree = "<group>"; };
 		DC8E6F572ABC765600C1291A /* NumberTriviaSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NumberTriviaSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8E6F5A2ABC765600C1291A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC8E6F5C2ABC765600C1291A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,10 +77,26 @@
 		DC8E6F662ABC765800C1291A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC8E6F682ABC765800C1291A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8E6F6D2ABC765900C1291A /* NumberTriviaSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberTriviaSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC8E6F712ABC765900C1291A /* NumberTriviaSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaSwiftTests.swift; sourceTree = "<group>"; };
 		DC8E6F772ABC765900C1291A /* NumberTriviaSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberTriviaSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8E6F7B2ABC765900C1291A /* NumberTriviaSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaSwiftUITests.swift; sourceTree = "<group>"; };
 		DC8E6F7D2ABC765900C1291A /* NumberTriviaSwiftUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaSwiftUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		DC8E6F962ABC79B900C1291A /* NumberTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTrivia.swift; sourceTree = "<group>"; };
+		DC8E6F982ABC7A1700C1291A /* NumberTriviaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaRepository.swift; sourceTree = "<group>"; };
+		DC8E6F9A2ABC7C6500C1291A /* GetConcreteNumberTriviaTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConcreteNumberTriviaTest.swift; sourceTree = "<group>"; };
+		DC8E6F9D2ABC83B000C1291A /* Either.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Either.swift; sourceTree = "<group>"; };
+		DC8E6F9F2ABC83E500C1291A /* Usecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usecase.swift; sourceTree = "<group>"; };
+		DC8E6FA12ABC84DD00C1291A /* GetConcreteNumberTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetConcreteNumberTrivia.swift; sourceTree = "<group>"; };
+		DC8E6FA32ABC94AB00C1291A /* MockNumberTriviaRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNumberTriviaRepository.swift; sourceTree = "<group>"; };
+		DC8E6FA52ABC969600C1291A /* GetRandomNumberTriviaTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomNumberTriviaTest.swift; sourceTree = "<group>"; };
+		DC8E6FA72ABC988D00C1291A /* GetRandomNumberTrivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetRandomNumberTrivia.swift; sourceTree = "<group>"; };
+		DC8E6FA92ABCB4E300C1291A /* NumberTriviaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaModel.swift; sourceTree = "<group>"; };
+		DC8E6FAB2ABCB50700C1291A /* NumberTriviaModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTriviaModelTest.swift; sourceTree = "<group>"; };
+		DC8E6FB32ABCBD2800C1291A /* trivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trivia.json; sourceTree = "<group>"; };
+		DC8E6FB52ABCBD7000C1291A /* triviaDouble.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = triviaDouble.json; sourceTree = "<group>"; };
+		DC8E6FB72ABCBDF100C1291A /* JsonToString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonToString.swift; sourceTree = "<group>"; };
+		DC8E6FB92ABCC63400C1291A /* JsonToStringTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonToStringTest.swift; sourceTree = "<group>"; };
+		DC8E6FBB2ABCD1B600C1291A /* JsonStringToMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStringToMap.swift; sourceTree = "<group>"; };
+		DC8E6FBD2ABD561A00C1291A /* JsonStringToMapTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonStringToMapTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +124,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC33B7522ABD8745004EBBFF /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				DC33B7532ABD875A004EBBFF /* NetworkInfo.swift */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		DC33B7572ABDFB25004EBBFF /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				DC33B7582ABDFB3E004EBBFF /* Exception.swift */,
+				DC33B75C2ABED388004EBBFF /* DataFailure.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		DC8E6F4E2ABC765600C1291A = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +164,9 @@
 		DC8E6F592ABC765600C1291A /* NumberTriviaSwift */ = {
 			isa = PBXGroup;
 			children = (
+				DC8E6FAD2ABCBAAE00C1291A /* Fixtures */,
+				DC8E6F9C2ABC839500C1291A /* Core */,
+				DC8E6F8A2ABC767F00C1291A /* Features */,
 				DC8E6F5A2ABC765600C1291A /* AppDelegate.swift */,
 				DC8E6F5C2ABC765600C1291A /* SceneDelegate.swift */,
 				DC8E6F5E2ABC765600C1291A /* ViewController.swift */,
@@ -113,7 +181,12 @@
 		DC8E6F702ABC765900C1291A /* NumberTriviaSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				DC8E6F712ABC765900C1291A /* NumberTriviaSwiftTests.swift */,
+				DC8E6F9A2ABC7C6500C1291A /* GetConcreteNumberTriviaTest.swift */,
+				DC8E6FA52ABC969600C1291A /* GetRandomNumberTriviaTest.swift */,
+				DC8E6FAB2ABCB50700C1291A /* NumberTriviaModelTest.swift */,
+				DC8E6FB92ABCC63400C1291A /* JsonToStringTest.swift */,
+				DC8E6FBD2ABD561A00C1291A /* JsonStringToMapTest.swift */,
+				DC33B77C2ABEF7C1004EBBFF /* NumberTriviaRepositoryImplTests.swift */,
 			);
 			path = NumberTriviaSwiftTests;
 			sourceTree = "<group>";
@@ -125,6 +198,125 @@
 				DC8E6F7D2ABC765900C1291A /* NumberTriviaSwiftUITestsLaunchTests.swift */,
 			);
 			path = NumberTriviaSwiftUITests;
+			sourceTree = "<group>";
+		};
+		DC8E6F8A2ABC767F00C1291A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F8B2ABC769300C1291A /* NumberTrivia */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		DC8E6F8B2ABC769300C1291A /* NumberTrivia */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F922ABC77AD00C1291A /* Data */,
+				DC8E6F8D2ABC76D900C1291A /* Domain */,
+				DC8E6F8C2ABC76B900C1291A /* Presentation */,
+			);
+			path = NumberTrivia;
+			sourceTree = "<group>";
+		};
+		DC8E6F8C2ABC76B900C1291A /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DC8E6F8D2ABC76D900C1291A /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F912ABC774700C1291A /* Usecases */,
+				DC8E6F8F2ABC771000C1291A /* Repositories */,
+				DC8E6F8E2ABC76FB00C1291A /* Entitiess */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DC8E6F8E2ABC76FB00C1291A /* Entitiess */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F962ABC79B900C1291A /* NumberTrivia.swift */,
+			);
+			path = Entitiess;
+			sourceTree = "<group>";
+		};
+		DC8E6F8F2ABC771000C1291A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F982ABC7A1700C1291A /* NumberTriviaRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DC8E6F912ABC774700C1291A /* Usecases */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6FA12ABC84DD00C1291A /* GetConcreteNumberTrivia.swift */,
+				DC8E6FA72ABC988D00C1291A /* GetRandomNumberTrivia.swift */,
+			);
+			path = Usecases;
+			sourceTree = "<group>";
+		};
+		DC8E6F922ABC77AD00C1291A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6F952ABC77DD00C1291A /* Repositories */,
+				DC8E6F942ABC77D400C1291A /* Models */,
+				DC8E6F932ABC77B400C1291A /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DC8E6F932ABC77B400C1291A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				DC33B7552ABDF9F0004EBBFF /* NumberTriviaRemoteDataSource.swift */,
+				DC33B75A2ABDFF09004EBBFF /* NumberTriviaLocalDataSource.swift */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		DC8E6F942ABC77D400C1291A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6FA92ABCB4E300C1291A /* NumberTriviaModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DC8E6F952ABC77DD00C1291A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				DC33B7502ABD86AC004EBBFF /* NumberTriviaRepositoryImpl .swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DC8E6F9C2ABC839500C1291A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6FA32ABC94AB00C1291A /* MockNumberTriviaRepository.swift */,
+				DC33B7572ABDFB25004EBBFF /* Error */,
+				DC33B7522ABD8745004EBBFF /* Platform */,
+				DC8E6F9D2ABC83B000C1291A /* Either.swift */,
+				DC8E6F9F2ABC83E500C1291A /* Usecase.swift */,
+				DC8E6FB72ABCBDF100C1291A /* JsonToString.swift */,
+				DC8E6FBB2ABCD1B600C1291A /* JsonStringToMap.swift */,
+				DC33B77A2ABEF743004EBBFF /* MockLocalDataSource.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		DC8E6FAD2ABCBAAE00C1291A /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E6FB32ABCBD2800C1291A /* trivia.json */,
+				DC8E6FB52ABCBD7000C1291A /* triviaDouble.json */,
+			);
+			path = Fixtures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +426,8 @@
 				DC8E6F672ABC765800C1291A /* LaunchScreen.storyboard in Resources */,
 				DC8E6F642ABC765800C1291A /* Assets.xcassets in Resources */,
 				DC8E6F622ABC765600C1291A /* Main.storyboard in Resources */,
+				DC33B7612ABEE0D5004EBBFF /* trivia.json in Resources */,
+				DC33B7602ABEE0D1004EBBFF /* triviaDouble.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +452,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8E6F5F2ABC765600C1291A /* ViewController.swift in Sources */,
-				DC8E6F5B2ABC765600C1291A /* AppDelegate.swift in Sources */,
-				DC8E6F5D2ABC765600C1291A /* SceneDelegate.swift in Sources */,
+				DC33B77B2ABEF743004EBBFF /* MockLocalDataSource.swift in Sources */,
+				DC33B76C2ABEE70A004EBBFF /* Either.swift in Sources */,
+				DC33B76E2ABEE72E004EBBFF /* NumberTriviaModel.swift in Sources */,
+				DC33B7752ABEE798004EBBFF /* JsonStringToMap.swift in Sources */,
+				DC33B7732ABEE78D004EBBFF /* DataFailure.swift in Sources */,
+				DC33B7672ABEE6E5004EBBFF /* NumberTrivia.swift in Sources */,
+				DC33B7652ABEE66C004EBBFF /* MockNumberTriviaRepository.swift in Sources */,
+				DC33B7742ABEE795004EBBFF /* JsonToString.swift in Sources */,
+				DC33B76F2ABEE744004EBBFF /* ViewController.swift in Sources */,
+				DC33B76D2ABEE716004EBBFF /* Usecase.swift in Sources */,
+				DC33B77E2ABEF9C4004EBBFF /* NetworkInfo.swift in Sources */,
+				DC33B76B2ABEE6FB004EBBFF /* NumberTriviaLocalDataSource.swift in Sources */,
+				DC33B7662ABEE6D7004EBBFF /* NumberTriviaRepository.swift in Sources */,
+				DC33B7722ABEE78A004EBBFF /* Exception.swift in Sources */,
+				DC33B7782ABEF22F004EBBFF /* AppDelegate.swift in Sources */,
+				DC33B7692ABEE6F3004EBBFF /* GetRandomNumberTrivia.swift in Sources */,
+				DC33B7762ABEE7AE004EBBFF /* NumberTriviaRepositoryImpl .swift in Sources */,
+				DC33B76A2ABEE6F8004EBBFF /* NumberTriviaRemoteDataSource.swift in Sources */,
+				DC33B7682ABEE6F0004EBBFF /* GetConcreteNumberTrivia.swift in Sources */,
+				DC33B7702ABEE747004EBBFF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +479,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC8E6F722ABC765900C1291A /* NumberTriviaSwiftTests.swift in Sources */,
+				DC8E6FBE2ABD561A00C1291A /* JsonStringToMapTest.swift in Sources */,
+				DC33B77D2ABEF7C1004EBBFF /* NumberTriviaRepositoryImplTests.swift in Sources */,
+				DC8E6FAC2ABCB50700C1291A /* NumberTriviaModelTest.swift in Sources */,
+				DC8E6FBA2ABCC63400C1291A /* JsonToStringTest.swift in Sources */,
+				DC8E6F9B2ABC7C6500C1291A /* GetConcreteNumberTriviaTest.swift in Sources */,
+				DC8E6FA62ABC969600C1291A /* GetRandomNumberTriviaTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
