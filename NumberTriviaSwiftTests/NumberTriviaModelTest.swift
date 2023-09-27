@@ -43,6 +43,21 @@ class NumberTriviaModelTest: XCTestCase {
         let model = NumberTriviaModel.fromJson(json: map)
         XCTAssertNil(model)
     }
+    //tets for too big double number
+    func testMapWithTextAndTooBigNumber() {
+        
+        let map:[String: Any] = [ "text" : "text" , "number": 132434324535354335543535535.5345435435]
+        let model = NumberTriviaModel.fromJson(json: map)
+        XCTAssertNil(model)
+    }
+    func testMapWithTextAndValidDoubleNumber() {
+      //  let maxSafeDoubleToInt = Double(Int.max)
+
+        let map:[String: Any] = [ "text" : "text" , "number": 3243243322123.24]
+        let model = NumberTriviaModel.fromJson(json: map)
+        XCTAssertNotNil(model)
+    }
+    
     
     // to json
     func testObjectToMap() {
