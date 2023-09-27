@@ -159,6 +159,7 @@
 		DC8E6F4E2ABC765600C1291A = {
 			isa = PBXGroup;
 			children = (
+				DCA841492AC423AC005AB46F /* README.md */,
 				DC8E6F592ABC765600C1291A /* NumberTriviaSwift */,
 				DC8E6F702ABC765900C1291A /* NumberTriviaSwiftTests */,
 				DC8E6F7A2ABC765900C1291A /* NumberTriviaSwiftUITests */,
@@ -189,7 +190,6 @@
 				DC8E6F632ABC765800C1291A /* Assets.xcassets */,
 				DC8E6F652ABC765800C1291A /* LaunchScreen.storyboard */,
 				DC8E6F682ABC765800C1291A /* Info.plist */,
-				DCA841492AC423AC005AB46F /* README.md */,
 			);
 			path = NumberTriviaSwift;
 			sourceTree = "<group>";
