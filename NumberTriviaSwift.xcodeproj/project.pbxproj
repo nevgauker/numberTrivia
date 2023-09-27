@@ -111,6 +111,7 @@
 		DCA841422AC1AAFF005AB46F /* InputConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputConverter.swift; sourceTree = "<group>"; };
 		DCA841442AC1AC27005AB46F /* InputConverterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputConverterTest.swift; sourceTree = "<group>"; };
 		DCA841472AC2DE4F005AB46F /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		DCA841492AC423AC005AB46F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +189,7 @@
 				DC8E6F632ABC765800C1291A /* Assets.xcassets */,
 				DC8E6F652ABC765800C1291A /* LaunchScreen.storyboard */,
 				DC8E6F682ABC765800C1291A /* Info.plist */,
+				DCA841492AC423AC005AB46F /* README.md */,
 			);
 			path = NumberTriviaSwift;
 			sourceTree = "<group>";
