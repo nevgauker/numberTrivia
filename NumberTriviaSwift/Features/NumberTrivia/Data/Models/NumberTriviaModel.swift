@@ -19,7 +19,7 @@ class NumberTriviaModel : NumberTrivia {
         num = json["number"] as? Int
 
         if let value = json["number"] as? Double {
-            num = Int(value)
+                num = Int(value)
         }
 
         guard let text = json["text"] as? String, let number = num   else {

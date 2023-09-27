@@ -10,5 +10,6 @@ import Foundation
 enum ServerException: Error {
     case ServerException
     case CacheException
+    case JSONSerializationException
 }
 

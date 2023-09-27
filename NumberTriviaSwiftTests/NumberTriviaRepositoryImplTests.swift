@@ -12,29 +12,34 @@ import XCTest
 class Mock {}
 
 class MockRemoteDataSource: Mock, NumberTriviaRemoteDataSource {
-    func getConcreteNumberTrivia(number: Int) async throws -> NumberTriviaModel {
+    func getConcreteNumberTrivia(number: Int, completion: @escaping (NumberTriviaSwift.Either<ServerException, NumberTriviaModel>) -> Void) {
         let fake = NumberTriviaModel(text: "remote number", number: 1)
-        return fake
+        completion(.right(fake))
     }
     
-    func getRandomNumberTrivia() async throws -> NumberTriviaModel {
+    func getRandomNumberTrivia(completion: @escaping (NumberTriviaSwift.Either<ServerException, NumberTriviaModel>) -> Void) {
         let fake = NumberTriviaModel(text: "random number", number: 1)
-        return fake
+        completion(.right(fake))
+
     }
-    
 }
 class MockLocalDataSource: Mock, NumberTriviaLocalDataSource {
-    func getLastNumberTrivia() async throws -> NumberTriviaModel {
+    func getLastNumberTrivia(completion: @escaping (NumberTriviaSwift.Either<ServerException, NumberTriviaModel>) -> Void) {
         let fake = NumberTriviaModel(text: "local number", number: 1)
-        return fake
+        completion(.right(fake))
+    
     }
     
-    func cacheNumberTrivia(triviaToCache: NumberTriviaModel) async {
+    func cacheNumberTrivia(triviaToCache: NumberTriviaSwift.NumberTriviaModel, completion: @escaping (NumberTriviaSwift.Either<ServerException, NumberTriviaModel>) -> Void) {
         
     }
     
 }
 class MockNetworkInfo: Mock, NetworkInfo {
+    func updateConnectivity() {
+        isConnected = true
+    }
+    
     var isConnected: Bool = true
 }
 
@@ -62,7 +67,25 @@ class NumberTriviaRepositoryImplTests: XCTestCase {
         mockNetworkInfo.isConnected = true
         let expected = NumberTrivia(text: "remote number", number: 1)
         // Act
-        await repository.getConcreteNumberTrivia(params: Params(number: 1), completion: {
+         repository.getConcreteNumberTrivia(params: Params(number: 1), completion: {
+            result in
+            switch result {
+            case .left(let failure):
+                print("Error: \(failure)")
+            case .right(let numberTrivia):
+                XCTAssertEqual( numberTrivia, expected)
+            }
+        })
+        XCTAssertTrue(mockNetworkInfo.isConnected)
+    }
+    
+    
+    func testGetRandomNumberTriviaShouldCheckIfDeviceIsOnline() async {
+        
+        mockNetworkInfo.isConnected = true
+        let expected = NumberTrivia(text: "random number", number: 1)
+        // Act
+         repository.getRandomNumberTrivia(completion: {
             result in
             switch result {
             case .left(let failure):
@@ -77,7 +100,7 @@ class NumberTriviaRepositoryImplTests: XCTestCase {
     func testGetConcreteNumberTriviaShouldCheckIfDeviceIsOffline() async {
         mockNetworkInfo.isConnected = false 
         let expected = NumberTrivia(text: "local number", number: 1)
-        await repository.getConcreteNumberTrivia(params: Params(number: 1), completion: {
+         repository.getConcreteNumberTrivia(params: Params(number: 1), completion: {
             result in
                     switch result {
                     case .left(let failure):
@@ -85,6 +108,23 @@ class NumberTriviaRepositoryImplTests: XCTestCase {
                     case .right(let numberTrivia):
                         XCTAssertEqual( numberTrivia, expected)
                     }
+        })
+        XCTAssertFalse(mockNetworkInfo.isConnected)
+    }
+    
+    func testGetRandomNumberTriviaShouldCheckIfDeviceIsOffline() async {
+        
+        mockNetworkInfo.isConnected = false
+        let expected = NumberTrivia(text: "local number", number: 1)
+        // Act
+         repository.getRandomNumberTrivia(completion: {
+            result in
+            switch result {
+            case .left(let failure):
+                print("Error: \(failure)")
+            case .right(let numberTrivia):
+                XCTAssertEqual( numberTrivia, expected)
+            }
         })
         XCTAssertFalse(mockNetworkInfo.isConnected)
     }

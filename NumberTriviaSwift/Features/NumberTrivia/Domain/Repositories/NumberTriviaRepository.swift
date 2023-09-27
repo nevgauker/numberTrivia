@@ -9,6 +9,6 @@ import Foundation
 
 
 protocol NumberTriviaRepository {
-    func getConcreteNumberTrivia(params: Params?, completion: @escaping (Either<Failure, NumberTrivia>) -> Void) async
-    func getRandomNumberTrivia(completion: @escaping (Either<Failure, NumberTrivia>) -> Void)
+    func getConcreteNumberTrivia(params: Params?, completion: @escaping (Either<Failure, NumberTrivia>) -> Void)
+    func getRandomNumberTrivia(completion: @escaping (Either<Failure, NumberTrivia>) -> Void) 
 }

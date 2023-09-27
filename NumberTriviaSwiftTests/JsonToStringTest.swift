@@ -26,8 +26,8 @@ class JsonToStringTest: XCTestCase {
         switch result {
         case .right:
             XCTFail("Expected a successful result")
-        case .left(let err):
-            XCTAssertTrue(err is JsonFailure)
+        case .left(let jsonFailure):
+            XCTAssertEqual(jsonFailure, .notFound)
         }
     }
 }

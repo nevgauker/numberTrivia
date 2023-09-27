@@ -9,7 +9,7 @@ import Foundation
 
 
 class NumberTriviaRepositoryImpl : NumberTriviaRepository {
-
+  
   final let  remoteDataSource: NumberTriviaRemoteDataSource
   final let localDataSource: NumberTriviaLocalDataSource
   final let networkInfo: NetworkInfo
@@ -22,28 +22,39 @@ class NumberTriviaRepositoryImpl : NumberTriviaRepository {
     }
     
     
-    func getConcreteNumberTrivia(params: Params?, completion: @escaping (Either<Failure, NumberTrivia>) -> Void) async {
+    func getConcreteNumberTrivia(params: Params?, completion: @escaping (Either<Failure, NumberTrivia>) -> Void)  {
         
         if let number = params?.number {
 
             if networkInfo.isConnected {
                 //network
-                if let result =  try? await remoteDataSource.getConcreteNumberTrivia(number: number){
-                    
-                    let obj =  NumberTrivia(text: result.text, number: result.number)
-
-                    completion(.right(obj))
-                } else{
-                    completion(.left(.someError))
+                
+                remoteDataSource.getConcreteNumberTrivia(number: number){ result in
+                    switch result {
+                    case .left(let serverExecption):
+                        print(serverExecption)
+                        completion(.left(.someError))
+                    case .right(let numberTrivia):
+                        self.self.localDataSource.cacheNumberTrivia(triviaToCache: numberTrivia, completion: {
+                            _ in
+                        })
+                        let obj =  NumberTrivia(text: numberTrivia.text, number: numberTrivia.number)
+                        completion(.right(obj))
+                    }
                 }
-
             }else{
                 //local
-                if let result =  try? await localDataSource.getLastNumberTrivia(){
-                    
-                    let obj =  NumberTrivia(text: result.text, number: result.number)
-                    completion(.right(obj))
-                    completion(.left(.someError))
+                localDataSource.getLastNumberTrivia(){ result in
+                    switch result {
+                    case .left(_ ):
+                        completion(.left(.someError))
+                    case .right(let numberTrivia):
+                        self.self.localDataSource.cacheNumberTrivia(triviaToCache: numberTrivia, completion: {
+                            _ in
+                        })
+                        let obj =  NumberTrivia(text: numberTrivia.text, number: numberTrivia.number)
+                        completion(.right(obj))
+                    }
                 }
             }
         }
@@ -53,7 +64,31 @@ class NumberTriviaRepositoryImpl : NumberTriviaRepository {
     }
     
     func getRandomNumberTrivia(completion: @escaping (Either<Failure, NumberTrivia>) -> Void) {
-        
+        if networkInfo.isConnected {
+            //network
+            
+            remoteDataSource.getRandomNumberTrivia(){result in
+                    switch result {
+                    case .right(let number):
+                        let obj =  NumberTrivia(text: number.text, number: number.number)
+                        completion(.right(obj))
+                    case .left(let err):
+                        print(err)
+                        completion(.left(.someError))
+                    }
+            }
+        }else{
+            //local
+          localDataSource.getLastNumberTrivia(){ result in
+              switch result {
+              case .left(_ ):
+                  completion(.left(.someError))
+              case .right(let numberTrivia):
+                  let obj =  NumberTrivia(text: numberTrivia.text, number: numberTrivia.number)
+                  completion(.right(obj))
+              }
+            }
+        }
     }
     
     

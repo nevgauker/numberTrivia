@@ -11,7 +11,7 @@ protocol UseCase {
     associatedtype TheType
     associatedtype Params
     
-     func call(params: Params?, completion: @escaping (Either<Failure, TheType>) -> Void)
+     func call(params: Params?, completion: @escaping (Either<Failure, TheType>) -> Void) 
 
 }
 
