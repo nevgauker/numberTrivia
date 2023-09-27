@@ -31,6 +31,20 @@ class NumberTriviaRemoteDataSourceImpl : NumberTriviaRemoteDataSource{
                             if let jsonDict = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                                 // Now, jsonDict contains the JSON data as a [String: Any] dictionary
                                 print(jsonDict)
+                                
+                                if let number = jsonDict["number"] as? Double {
+                                    // Check if the number is not bigger than the maximum possible Double value
+                                    if number <= Double.greatestFiniteMagnitude {
+                                        print("The number is within the valid range for Double.")
+                                    } else {
+                                        print("The number is too big for a Double.")
+                                        completion(.left(ServerException.ServerException))
+                                    }
+                                }
+                                
+                                
+                                
+                                
                                 let obj = NumberTriviaModel.fromJson(json: jsonDict)
                                 if let returnedObject = obj {
                                     completion(.right(returnedObject))

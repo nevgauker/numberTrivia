@@ -18,8 +18,14 @@ class NumberTriviaModel : NumberTrivia {
         var num:Int? = nil
         num = json["number"] as? Int
 
-        if let value = json["number"] as? Double {
-                num = Int(value)
+        if let doubleValue = json["number"] as? Double {
+            
+            if doubleValue >= Double(Int.min) && doubleValue <= Double(Int.max) {
+                let intValue = Int(doubleValue)
+                num = intValue
+            } else {
+                print("Double value is too large to fit into an Int.")
+            }
         }
 
         guard let text = json["text"] as? String, let number = num   else {

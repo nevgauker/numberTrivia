@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F4D71F82-C386-4A41-89AD-6701F9B3612C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "NumberTriviaSwift/Features/NumberTrivia/Domain/Entitiess/NumberTrivia.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "==(lhs:rhs:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E96BE40F-167B-4631-A0F4-3433BAAAD683"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -55,16 +39,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "C3C063E7-4468-4CBC-BF73-66441EA56119"
-            shouldBeEnabled = "No"
+            uuid = "23E053E5-A7E2-4039-A0D4-DFD9B306235C"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NumberTriviaSwift/Features/NumberTrivia/Data/DataSources/NumberTriviaLocalDataSource.swift"
+            filePath = "NumberTriviaSwift/Features/NumberTrivia/Data/DataSources/NumberTriviaRemoteDataSource.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "getLastNumberTrivia(completion:)"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "getRandomNumberTrivia(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
